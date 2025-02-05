@@ -5,8 +5,6 @@ import java.nio.charset.StandardCharsets;
 import java.util.Map;
 import java.util.Hashtable;
 
-//test shopify
-
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 
@@ -22,19 +20,7 @@ public class Get extends HttpServlet {
 		if (is != null) {
 			// TODO complete the implementation
 			// reading the file and populating the dictionary
-			BufferedReader reader = new BufferedReader(new InputStream (is,StandardCharsets.UTF_8));
-			String br;
-			br=reader.readLine();
-			while (br != null){
-				String[] parts = br.split("\\|");
-				if (parts.length==2){
-					String word = parts[0].trim();
-					String definition = parts[1].trim();
-					dict.put(word, definition);
-				}
-
-
-			}
+	
 		}
 	}
 
